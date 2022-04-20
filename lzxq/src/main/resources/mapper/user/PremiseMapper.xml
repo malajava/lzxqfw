@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dazzlzy.springbootseed.dao.user.PremiseMapper">
+    <resultMap id="BaseResultMap" type="com.dazzlzy.springbootseed.model.user.Premise">
+        <id column="CERTIFICATE_TYPE_NAME" jdbcType="BIGINT" property="certificateTypeName"/>
+        <result column="DIRECTORY_ID" jdbcType="VARCHAR" property="directoryId"/>
+        <result column="DATA_ID" jdbcType="VARCHAR" property="dataId"/>
+        <result column="LIC_NO" jdbcType="VARCHAR" property="licNo"/>
+        <result column="LIC_NAME" jdbcType="VARCHAR" property="licName"/>
+        <result column="LIC_OWNER" jdbcType="VARCHAR" property="licOwner"/>
+        <result column="LIC_OWNER_NAME" jdbcType="VARCHAR" property="licOwnerName"/>
+        <result column="LIC_ENO" jdbcType="VARCHAR" property="licENo"/>
+        <result column="SEND_DATE" jdbcType="VARCHAR" property="sendDate"/>
+        <result column="LIC_SEND_UNIT_NAME" jdbcType="VARCHAR" property="licSendUnitName"/>
+        <result column="END_DATE" jdbcType="VARCHAR" property="endDate"/>
+        <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName"/>
+    </resultMap>
+
+    <select id="selectPremise" parameterType="com.dazzlzy.springbootseed.model.user.Premise" resultType="com.dazzlzy.springbootseed.model.user.Premise">
+          select * from T00_PREMISE
+    </select>
+</mapper>
